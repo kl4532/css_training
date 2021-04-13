@@ -1,0 +1,114 @@
+$main-color: #d2caaf;
+$font: Rockwell, "Courier Bold", Courier;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $font;
+  color: $main-color;
+}
+
+body {
+  padding: 3em;
+}
+
+.content {
+  background: #502F3E;
+  height: 100%;
+  border-radius: 1em;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+
+    .company-name {
+      display: flex;
+      p {
+        margin-left: 4em;
+        font-weight: bold;
+      }
+
+      .logo {
+        position: relative;
+        .circle {
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+        }
+        .orange {
+          position: absolute;
+          left:0;
+          top: 0.5em;
+          background-color: indianred;
+        }
+        .white {
+          position: absolute;
+          left:1em;
+          top: 0.5em;
+          background-color: white;
+        }
+      }
+
+    }
+
+    .links {
+      display: flex;
+
+      .btn-get-started {
+        background: #FFE3C2;
+        border-radius: 1.5em;
+        border: none;
+        padding: 0 1em;
+        min-width: 10em;
+        font: 100 0.9em $font;
+        margin-left: 2em;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        li {
+          padding: 0 2em;
+          a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  header {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+
+    h1 {
+      font-size: 2.9em;
+      width: 90%;
+      line-height: 1.2em;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2em;
+      width: 75%;
+    }
+
+  }
+
+}
+
+.original-source {
+  background-color: yellow;
+}
+
+
