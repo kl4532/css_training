@@ -1,12 +1,13 @@
 $main-color: #d2caaf;
-$font: Rockwell, "Courier Bold", Courier;
+$background-color: #502F3E;
+$font: 'Crete Round', serif;
 
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: $font;
   color: $main-color;
+  letter-spacing: .1rem;
 }
 
 body {
@@ -14,8 +15,7 @@ body {
 }
 
 .content {
-  background: #502F3E;
-  height: 100%;
+  background: $background-color;
   border-radius: 1em;
 
   nav {
@@ -34,21 +34,21 @@ body {
       .logo {
         position: relative;
         .circle {
-          width: 2em;
-          height: 2em;
+          width: 1.5em;
+          height: 1.5em;
           border-radius: 50%;
         }
         .orange {
           position: absolute;
           left:0;
-          top: 0.5em;
+          top: 0.9em;
           background-color: indianred;
         }
         .white {
           position: absolute;
           left:1em;
-          top: 0.5em;
-          background-color: white;
+          top: 0.9em;
+          background-color: $main-color;
         }
       }
 
@@ -56,15 +56,14 @@ body {
 
     .links {
       display: flex;
+      align-items: center;
 
       .btn-get-started {
         background: #FFE3C2;
-        border-radius: 1.5em;
-        border: none;
-        padding: 0 1em;
-        min-width: 10em;
         font: 100 0.9em $font;
         margin-left: 2em;
+        padding: 0 1em;
+        height: 2.5em;
       }
 
       ul {
@@ -86,29 +85,69 @@ body {
 
   }
 
-  header {
+  main {
     margin: auto;
     width: 70%;
     text-align: center;
 
-    h1 {
-      font-size: 2.9em;
-      width: 90%;
-      line-height: 1.2em;
+    .heading {
+      h1 {
+
+        font-size: 2.9em;
+        line-height: 1.2em;
+      }
+
+      p {
+        margin: 1em 0 2em 0;
+        font-size: 1.2em;
+      }
     }
 
-    p {
-      margin: 0;
-      font-size: 1.2em;
-      width: 75%;
+
+
+    .btn-try {
+      font: 100 1.2em $font;
+      padding: 0.8em 1.5em;
+      margin-bottom: 2em;
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      max-height: 400px;
+      max-width: 600px;
+      margin: auto;
+      padding-right: 10em;
+
+      .img-flower, .img-worker {
+        max-width:100%;
+        max-height:100%;
+      }
+
     }
 
   }
 
+  button {
+      background: #d9be00;
+      border-radius: 1.5em;
+      border: none;
+      padding: 0 2em;
+      min-width: 10em;
+      color: $background-color;
+  }
+
+
+
+
 }
 
-.original-source {
+.design {
   background-color: yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 
