@@ -1,22 +1,50 @@
 $main-color: #d2caaf;
 $background-color: #502F3E;
 $font: 'Crete Round', serif;
+$orange: indianred;
+
+// media
+$mobile: 480px;
+$medium: 768px;
+$desktop: 1024px;
 
 html, body {
   margin: 0;
   padding: 0;
+  background-color: $main-color;
   font-family: $font;
   color: $main-color;
   letter-spacing: .1rem;
 }
 
 body {
-  padding: 3em;
+  padding: 3em 3em 0 3em;
 }
 
 .content {
   background: $background-color;
   border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+
+  .out-circle {
+    background-color: transparent;
+    border: 1px solid $orange;
+    border-radius: 50%;
+    width: 25em;
+    height: 25em;
+    position: absolute;
+  }
+
+  .left {
+    top: 20%;
+    left: -15em;
+  }
+
+  .right {
+    top: 70%;
+    right: -15em;
+  }
 
   nav {
     display: flex;
@@ -42,7 +70,7 @@ body {
           position: absolute;
           left:0;
           top: 0.9em;
-          background-color: indianred;
+          background-color: $orange;
         }
         .white {
           position: absolute;
@@ -92,14 +120,16 @@ body {
 
     .heading {
       h1 {
-
         font-size: 2.9em;
         line-height: 1.2em;
+        max-width: 30ch;
+        margin: 1em auto;
       }
 
       p {
-        margin: 1em 0 2em 0;
+        margin: 1em auto;
         font-size: 1.2em;
+        max-width: 60ch;
       }
     }
 
@@ -140,7 +170,6 @@ body {
 
 
 
-
 }
 
 .design {
@@ -148,6 +177,83 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+@media (max-width: $desktop) {
+  .content {
+    nav {
+      .links {
+        flex-direction: column;
+        ul {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop){
+
+  .content {
+    .out-circle {
+      width: 20em;
+      height: 20em;
+    }
+
+    .left {
+      top: 10%;
+      left: -15em;
+    }
+
+    .right {
+      top: 70%;
+      right: -15em;
+    }
+  }
+
+}
+
+@media (max-width: $mobile) {
+  .content {
+    nav {
+      flex-direction: column;
+      .links {
+        flex-direction: column;
+        ul {
+          flex-direction: column;
+        }
+      }
+    }
+
+    main {
+      .heading {
+        h1 {
+          font-size: 2em;
+        }
+      }
+
+      .images {
+        display: none;
+      }
+    }
+
+    .out-circle {
+      width: 18em;
+      height: 18em;
+    }
+
+    .left {
+      top: 10%;
+      left: -15em;
+    }
+
+    .right {
+      top: 70%;
+      right: -15em;
+    }
+  }
+
+
 }
 
 
