@@ -13,7 +13,7 @@ body {
 
 .content {
   background: #502F3E;
-  border-radius: 1em;
+  border-radius: 1em 1em 0em 0em;
   position: relative;
   overflow: hidden;
 }
@@ -24,6 +24,7 @@ body {
   width: 25em;
   height: 25em;
   position: absolute;
+  z-index: 0;
 }
 .content .left {
   top: 20%;
@@ -37,7 +38,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
+  padding: 1em 2em;
 }
 .content nav .company-name {
   display: flex;
@@ -95,6 +96,8 @@ body {
   margin: auto;
   width: 70%;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .content main .heading h1 {
   font-size: 2.9em;
@@ -141,15 +144,10 @@ body {
   left: 0;
 }
 
-@media (max-width: 1024px) {
-  .content nav .links {
-    flex-direction: column;
-  }
+@media (max-width: 868px) {
   .content nav .links ul {
     flex-direction: column;
   }
-}
-@media (max-width: 1024px) {
   .content .out-circle {
     width: 20em;
     height: 20em;
@@ -163,7 +161,7 @@ body {
     right: -15em;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 635px) {
   .content nav {
     flex-direction: column;
   }
